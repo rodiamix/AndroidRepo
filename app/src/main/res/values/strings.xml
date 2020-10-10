@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Test3App</string>
+    <string name="image_desc">no-wifi</string>
+    <string name="offline">you are offline !!</string>
+    <string name="check">check your internet connection and try again</string>
+    <string name="checkInternet">check your internet connection</string>
+    <string name="try_again">try again</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+</resources>
