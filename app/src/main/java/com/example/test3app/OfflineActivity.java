@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -18,6 +19,9 @@ public class OfflineActivity extends Activity {
 
     //images
     private ImageView bloodImage;
+
+    //Texts
+    private TextView loose;
 
     // if this - real shot
     private int onShot = 3;
@@ -36,6 +40,7 @@ public class OfflineActivity extends Activity {
         buttonShot = findViewById(R.id.real_btn);
         buttonDrum = findViewById(R.id.drum_btn);
         bloodImage = findViewById(R.id.image_blood);
+        loose = findViewById(R.id.looseText);
     }
 
     protected void createMediaPlayers() {
@@ -48,6 +53,7 @@ public class OfflineActivity extends Activity {
         if (random == onShot) {
             mediaPlayerShot.start();
             bloodImage.setVisibility(View.VISIBLE);
+            loose.setVisibility(View.VISIBLE);
         } else {
             mediaPlayerShotFalse.start();
         }
@@ -56,6 +62,7 @@ public class OfflineActivity extends Activity {
     public void onDrum(View view) {
         mediaPlayerDrum.start();
         bloodImage.setVisibility(View.GONE);
+        loose.setVisibility(View.GONE);
         random = new Random().nextInt(shopCapacity);
     }
 }
