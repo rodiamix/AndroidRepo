@@ -34,7 +34,7 @@ public class OnlineActivity extends AppCompatActivity {
         //cache support
         webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
 
-        webView.loadUrl("https://www.youtube.com/watch?v=sn2eisHLwwk&ab_channel=FIA");
+        webView.loadUrl("https://html5test.com/");
 
         WebViewClient webViewClient = new WebViewClient() {
             @Override
